@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>Список объектов жилой недвижимости</h1>
+        {% for page in main_pages %}
+        <table cellpadding="4" cellspacing="1" border="1" width="600">
+            <tr><td>Тип жилья: - </td><td>{{ page.type }}</td></tr>
+            <tr><td>Кол-во комнат: - </td><td>{{ page.numbers_flat }}</td></tr>
+            <tr><td>Стоимость: - </td><td>{{ page.price }}</td></tr>
+            <tr><td>Квадратные метры: - </td><td>{{ page.square_meters }}</td></tr>
+            <tr><td>Адрес: - </td><td>{{ page.address }}</td></tr>
+            <tr><td>Метро: - </td><td>{{ page.metro }}</td></tr>
+            <tr><td>Санузел: - </td><td>{{ page.bath_room }}</td></tr>
+            <tr><td>Балкон: - </td><td>{{ page.balcon }}</td></tr>
+            <tr><td>Продавец: - </td><td>{{ page.holders }}</td></tr>
+        </table>
+        <br><br><br><br>
+        {% endfor %}    
+    </body>
+</html>
